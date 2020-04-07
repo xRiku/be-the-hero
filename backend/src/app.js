@@ -36,6 +36,4 @@ app.use(errors());
  * Request Body: Corpo da requisição, utilizado para criar ou alterar recursos
  */
 
-
-
-app.listen(3333);
+module.exports = app;
