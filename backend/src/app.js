@@ -36,6 +36,10 @@ app.use(errors());
  * Request Body: Corpo da requisição, utilizado para criar ou alterar recursos
  */
 
+<<<<<<< HEAD:backend/src/index.js
 
 
 app.listen(3334);
+=======
+module.exports = app;
+>>>>>>> a11d1164db3014f0e24d0b151e6cf4b8a30561e8:backend/src/app.js
