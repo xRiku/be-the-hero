@@ -13,7 +13,7 @@ routes.post('/sessions', SessionController.create);
 
 routes.get('/profile', celebrate({
     [Segments.HEADERS]: Joi.object({
-        authorization: Join.string().required(),
+        authorization: Joi.string().required(),
     }).unknown(),
 }), ProfileController.index);
 
@@ -30,9 +30,9 @@ routes.post('/ongs', celebrate({
 }),  OngController.create);
 
 routes.get('/incidents', celebrate({
-    [Segments.QUERY]: Joi.object().keys(){
+    [Segments.QUERY]: Joi.object().keys({
         page: Joi.number(),
-    }
+    }) 
 }) , IncidentController.index);
 
 routes.post('/incidents', IncidentController.create);
